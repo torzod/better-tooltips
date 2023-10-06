@@ -1,0 +1,41 @@
+{
+    "schemaVersion": 1,
+    "id": "better-tooltips",
+    "version": "${version}",
+    "name": "Better Tooltips",
+    "description": "Improves Item Tooltips",
+    "authors": [
+        "ouroya"
+    ],
+    "contact": {
+        "homepage": "https://fabricmc.net/",
+        "sources": "https://github.com/FabricMC/fabric-example-mod"
+    },
+    "license": "CC BY-NC-SA 4.0",
+    "icon": "assets/better-tooltips/icon.png",
+    "environment": "*",
+    "entrypoints": {
+        "main": [
+            "ouroya.better_tooltips.ExampleMod"
+        ],
+        "client": [
+            "ouroya.better_tooltips.ExampleModClient"
+        ]
+    },
+    "mixins": [
+        "better-tooltips.mixins.json",
+        {
+            "config": "better-tooltips.client.mixins.json",
+            "environment": "client"
+        }
+    ],
+    "depends": {
+        "fabricloader": ">=0.14.21",
+        "minecraft": "~1.20.1",
+        "java": ">=17",
+        "fabric-api": "*"
+    },
+    "suggests": {
+        "another-mod": "*"
+    }
+}
